@@ -13,12 +13,14 @@ namespace USER {
   type getUserRequest = void;
 
   type postUserResponse = {
-    firstName: string;
-    lastName: string;
-    email: string;
-    password: string;
-    createdAt: string;
-    updatedAt: string;
+  id: number;
+  firstName: string;
+  lastName?: string;
+  email: string;
+  password: string;
+  createdAt: Date;
+  updatedAt: Date;
+  image?: string;
   };
 
   type postUserRequest = {
@@ -26,8 +28,7 @@ namespace USER {
     lastName: string;
     email: string;
     password: string;
-    createdAt: string;
-    updatedAt: string;
+    image: string;
   };
 
   type updateUserResponse = {
